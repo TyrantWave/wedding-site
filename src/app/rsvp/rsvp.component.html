@@ -49,7 +49,7 @@
       </p>
 
       <md-card-actions>
-        <button md-raised-button class="button-sm" [disabled]="rsvpForm.invalid" type="submit">SUBMIT</button>
+        <button md-raised-button class="button-sm" [disabled]="rsvpForm.invalid || sending" type="submit">SUBMIT</button>
         <a md-raised-button class="button-sm" href="/">RETURN</a>
       </md-card-actions>
     </form>

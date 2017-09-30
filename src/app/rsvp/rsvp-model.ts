@@ -6,4 +6,5 @@ export class Rsvp {
     public guests = 1;
     public vegetarian: boolean;
     public nonalcohol: boolean;
+
 }

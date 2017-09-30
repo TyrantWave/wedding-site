@@ -1,7 +1,10 @@
-import { Rsvp } from './rsvp-model';
 import { Component } from '@angular/core';
+import { MdSnackBar } from '@angular/material';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AngularFireDatabase } from 'angularfire2/database';
+
+import { Rsvp } from './rsvp-model';
 
 @Component({
   selector: 'app-rsvp',
@@ -12,8 +15,9 @@ export class RsvpComponent {
 
   rsvp: Rsvp;
   rsvpForm: FormGroup;
+  sending = false;
 
-  constructor(private af: AngularFireDatabase, private fb: FormBuilder) {
+  constructor(private af: AngularFireDatabase, private fb: FormBuilder, private router: Router) {
     this.createForm();
   }
 
@@ -29,6 +33,7 @@ export class RsvpComponent {
   }
 
   onSubmit() {
+    this.sending = true;
     this.rsvp = this.prepRsvp();
 
     const name = `${this.rsvp.name} ${this.rsvp.surname}`;
@@ -48,6 +53,11 @@ export class RsvpComponent {
     }
     const formRequest = { name, date, html };
     this.af.list('/messages').push(formRequest);
+    setTimeout(() => {
+      this.sending = false;
+      alert(`Thanks, ${this.rsvp.name}!`);
+      this.router.navigateByUrl('/');
+    }, 3000);
   }
 
   prepRsvp(): Rsvp {
@@ -64,5 +74,4 @@ export class RsvpComponent {
 
     return rsvp;
   }
-
 }
