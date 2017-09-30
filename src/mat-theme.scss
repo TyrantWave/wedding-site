@@ -1,0 +1,7 @@
+@import 'theme';
+
+@include mat-core($custom-typography);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$base-theme: mat-light-theme($primary, $accent);
+@include angular-material-theme($base-theme);

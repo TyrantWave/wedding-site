@@ -1,6 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'theme';
 
-body, html {
+@import 'theme';
+body,
+html {
     margin: 0;
 }
+
+body {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    background-image: url(/assets/background.JPG);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #999;
+}
+
+h1 {
+   color: mat-color($primary);
+}
+
+.button, .button-sm {
+    border: 2px solid $theme-color;
+    color: $theme-color;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    text-decoration: none;
+    padding: .3rem;
+    min-width: 100px;
+}
+
+.button-sm {
+    font-size: 1rem;
+    padding: 0;
+}
+
+.content {
+    font-family: $theme-font;
+    padding-top: 24px;
+  
+    h1, h2 {
+      color: $theme-color;
+    }
+    
+    .section-header {
+      font-weight: 600;
+      font-size: 2rem;
+      border-bottom: 2px solid mat-color($primary);
+      padding-bottom: 6px;
+      padding-top: 12px;
+    }
+  
+    .tagline {
+      font-size: 4rem;
+    }
+  
+    @media screen and (max-width: 960px) {
+      .tagline {
+        font-size: 3rem;
+      }
+    }
+  }

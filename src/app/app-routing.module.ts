@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { HomeComponent } from './home/home.component';
+import { RsvpComponent } from './rsvp/rsvp.component';
+
 const routes: Routes = [
-  {
-    path: '',
-    children: []
-  }
+  { path: 'rsvp', component: RsvpComponent },
+  { path: '', pathMatch: 'full', component: HomeComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
 @NgModule({

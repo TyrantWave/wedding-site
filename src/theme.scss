@@ -1,3 +1,14 @@
-//@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+@import '~@angular/material/theming';
 
-$theme-font: 'Coming Soon', cursive;
+$custom-typography: mat-typography-config(
+  $font-family: 'Poiret One, cursive',
+  $input: mat-typography-level(16px, 1.125, 900)
+);
+
+// Colour options for palette
+$primary: mat-palette($mat-cyan, 900);
+$accent: mat-palette($mat-grey, 900, 900, 900);
+
+// Shortcut variables
+$theme-color: mat-color($primary);
+$theme-font: mat-font-family($custom-typography);
