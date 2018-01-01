@@ -1,15 +1,27 @@
 <div class="container">
-    <div class="content">
-        <h1 class="animated tagline">Meera & Chris</h1>
+    <div class="content" fxLayout="column" fxLayoutAlign="center center">
 
-        <h1 class="animated save-the-date">SAVE THE DATE</h1>
+        <!-- Title card -->
+        <md-card class="site-card mat-elevation-z8">
+            <img mat-card-image src="assets/profile.jpg">
+            <h1 class="animated tagline">Meera & Chris</h1>
 
-        <h2 class="animated details">
-            August 10th, 2018<br />
-            Shendish Manor<br />
-            Apsley, Hertfordshire
-        </h2>
+            <h1 class="animated save-the-date">SAVE THE DATE</h1>
 
-        <a class="animated rsvp button" md-button href="/rsvp">RSVP</a>
+            <h2 class="animated details">
+                August 10th, 2018
+            </h2>
+        </md-card>
+
+        <!-- RSVP and Venue 情報  -->
+        <div class="information">
+            <h1 class="location-info">
+                <a href="https://www.shendish-manor.com/" target="_blank" rel="noopener">
+                    <md-icon>map</md-icon> Shendish Manor</a>
+                <br /> Apsley, Hertfordshire
+            </h1>
+
+            <a class="rsvp button" md-raised-button href="/rsvp">RSVP</a>
+        </div>
     </div>
 </div>

@@ -7,7 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdInputModule,
   MdCheckboxModule, MdCardModule,
-  MdRadioModule } from '@angular/material';
+  MdRadioModule, MdIconModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,6 +37,7 @@ import { environment } from '../environments/environment';
     MdCheckboxModule,
     MdCardModule,
     MdRadioModule,
+    MdIconModule,
     AppRoutingModule,
   ],
   providers: [],
