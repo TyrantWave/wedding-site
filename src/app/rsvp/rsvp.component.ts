@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MdSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AngularFireDatabase } from 'angularfire2/database';

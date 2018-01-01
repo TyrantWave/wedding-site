@@ -2,62 +2,62 @@
   <div fxLayout="column" fxLayoutAlign="center center" class="content mat-typography">
 
 
-    <md-card class="form-card">
+    <mat-card class="form-card">
       <h1 class="tagline">RSVP</h1>
-      <md-card-subtitle class="subtitle">
+      <mat-card-subtitle class="subtitle">
         <h2>
           <i>Please respond by May 1st, 2018</i>
         </h2>
-      </md-card-subtitle>
+      </mat-card-subtitle>
       <form class="form" [formGroup]="rsvpForm" novalidate (ngSubmit)="onSubmit()">
 
         <table class="form-item" cellspacing="0">
           <tr>
             <td>
-              <md-form-field class="form-item">
-                <input mdInput placeholder="First Name" type="text" id="name" required formControlName="name">
-              </md-form-field>
+              <mat-form-field class="form-item">
+                <input matInput placeholder="First Name" type="text" id="name" required formControlName="name">
+              </mat-form-field>
             </td>
             <td>
-              <md-form-field class="form-item">
-                <input mdInput placeholder="Last Name" type="text" id="surname" required formControlName="surname">
-              </md-form-field>
+              <mat-form-field class="form-item">
+                <input matInput placeholder="Last Name" type="text" id="surname" required formControlName="surname">
+              </mat-form-field>
             </td>
           </tr>
         </table>
 
         <p>
-          <md-radio-group formControlName="coming" id="coming">
-            <md-radio-button color="primary" name="coming" [value]=true>Will Attend</md-radio-button>
-            <md-radio-button color="primary" name="coming" [value]=false>Unable to Attend</md-radio-button>
-          </md-radio-group>
+          <mat-radio-group formControlName="coming" id="coming">
+            <mat-radio-button color="primary" name="coming" [value]=true>Will Attend</mat-radio-button>
+            <mat-radio-button color="primary" name="coming" [value]=false>Unable to Attend</mat-radio-button>
+          </mat-radio-group>
         </p>
 
         <p>
-          <md-form-field class="form-item">
+          <mat-form-field class="form-item">
             <label for="guests">Number of guests attending:&nbsp;</label>
-            <input mdInput type="number" id="guests" required formControlName="guests">
-          </md-form-field>
+            <input matInput type="number" id="guests" required formControlName="guests">
+          </mat-form-field>
         </p>
 
         <h2 class="section-header">Dietary Information</h2>
         <p>
-          <md-checkbox color="primary" type="checkbox" formControlName="vegetarian">
+          <mat-checkbox color="primary" type="checkbox" formControlName="vegetarian">
             Vegetarian
-          </md-checkbox>
+          </mat-checkbox>
         </p>
         <p>
-          <md-checkbox color="primary" type="checkbox" formControlName="nonalcohol">
+          <mat-checkbox color="primary" type="checkbox" formControlName="nonalcohol">
             Non-Alcohol
-          </md-checkbox>
+          </mat-checkbox>
         </p>
 
-        <md-card-actions>
-          <button md-raised-button class="button-sm" [disabled]="rsvpForm.invalid || sending" type="submit">SUBMIT</button>
-          <a md-raised-button class="button-sm" href="/">RETURN</a>
-        </md-card-actions>
+        <mat-card-actions>
+          <button mat-raised-button class="button-sm" [disabled]="rsvpForm.invalid || sending" type="submit">SUBMIT</button>
+          <a mat-raised-button class="button-sm" href="/">RETURN</a>
+        </mat-card-actions>
       </form>
-    </md-card>
+    </mat-card>
 
   </div>
 </div>

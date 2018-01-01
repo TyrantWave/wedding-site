@@ -5,9 +5,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdInputModule,
-  MdCheckboxModule, MdCardModule,
-  MdRadioModule, MdIconModule } from '@angular/material';
+import { MatButtonModule, MatInputModule,
+  MatCheckboxModule, MatCardModule,
+  MatRadioModule, MatIconModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,12 +32,12 @@ import { environment } from '../environments/environment';
     AngularFireDatabaseModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MdButtonModule,
-    MdInputModule,
-    MdCheckboxModule,
-    MdCardModule,
-    MdRadioModule,
-    MdIconModule,
+    MatButtonModule,
+    MatInputModule,
+    MatCheckboxModule,
+    MatCardModule,
+    MatRadioModule,
+    MatIconModule,
     AppRoutingModule,
   ],
   providers: [],
